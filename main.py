@@ -4,14 +4,10 @@ def main():
     word_count = get_word_count(text)
     print(f"--- Begin report of {book_path} ---")
     print(f"{word_count} words found in this document")
-    #print(letter_count(text))
-
     counts = letter_count(text)
     sorted_counts = sort_letters(counts)
-
     for item in sorted_counts:
         print(f"The '{item['letter']}' character was found {item['count']} times")
-
     print("--- End report ---")
 
 def letter_count(text):
